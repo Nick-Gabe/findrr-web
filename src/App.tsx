@@ -1,38 +1,22 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { Box, ChakraProvider, Flex } from "@chakra-ui/react";
+import Waves from "./components/background/Waves";
+import { ColorModeSwitcher } from "./components/generic/ColorModeSwitcher";
+import Logo from "./components/generic/Logo";
+import SearchBar from "./components/input/SearchBar";
+import theme from "./theme";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
+    <ColorModeSwitcher />
+    <Flex
+      flexDir={"column"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      minHeight={"100vh"}
+    >
+      <Logo />
+      <SearchBar />
+      <Waves position={"fixed"} bottom={0} left={0} zIndex={-1} />
+    </Flex>
   </ChakraProvider>
-)
+);
