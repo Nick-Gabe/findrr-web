@@ -1,14 +1,19 @@
-import { Flex, Icon, useColorModeValue } from "@chakra-ui/react";
+import { Button, Icon, useColorModeValue } from "@chakra-ui/react";
 
 const SearchIcon = (props: any) => {
   return (
-    <Flex
+    <Button
+      display={"flex"}
       backgroundColor={useColorModeValue("primary.100", "black.200")}
       borderRadius={"5px"}
       alignItems={"center"}
       justifyContent={"center"}
       transition={"background-color .2s ease"}
       _hover={{
+        cursor: "pointer",
+        backgroundColor: useColorModeValue("black.200", "primary.100"),
+      }}
+      _focus={{
         cursor: "pointer",
         backgroundColor: useColorModeValue("black.200", "primary.100"),
       }}
@@ -23,7 +28,7 @@ const SearchIcon = (props: any) => {
           />
         </svg>
       </Icon>
-    </Flex>
+    </Button>
   );
 };
 

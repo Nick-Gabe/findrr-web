@@ -1,8 +1,6 @@
 import { Heading, Text, useColorModeValue } from "@chakra-ui/react";
 
-interface IAppProps {}
-
-const Logo: React.FunctionComponent<IAppProps> = (props) => {
+const Logo = (props: any) => {
   return (
     <Heading as={"h1"} {...props}>
       <Text as={"span"} color={"primary.100"}>
