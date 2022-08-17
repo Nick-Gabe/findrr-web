@@ -1,10 +1,8 @@
-import { Request } from "miragejs";
-import { AnyFactories, AnyModels, Registry } from "miragejs/-types";
-import Schema from "miragejs/orm/schema";
+import { AnyFactories, AnyModels, Registry } from 'miragejs/-types'
+import Schema from 'miragejs/orm/schema'
 
 export function getSuggestions(
-  schema: Schema<Registry<AnyModels, AnyFactories>>,
-  request: Request
+  schema: Schema<Registry<AnyModels, AnyFactories>>
 ) {
-  return schema.db.suggestions;
+  return schema.db.suggestions
 }

@@ -1,13 +1,13 @@
-import { Icon, useColorModeValue } from "@chakra-ui/react";
+import { Icon, useColorModeValue } from '@chakra-ui/react'
 
-const Waves = (props: any) => {
+const Waves: React.FC<IGenericProps> = ({ style }) => {
   return (
     <Icon
       width="1440"
       height="389"
       viewBox="0 0 1440 389"
-      color={useColorModeValue("primary.100", "black")}
-      {...props}
+      color={useColorModeValue('primary.100', 'black')}
+      {...style}
     >
       <path
         opacity="0.2"
@@ -15,7 +15,7 @@ const Waves = (props: any) => {
         fill="currentColor"
       />
     </Icon>
-  );
-};
+  )
+}
 
-export default Waves;
+export default Waves

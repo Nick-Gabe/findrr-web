@@ -32,6 +32,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "fix": "npx eslint src --fix --ext .tsx",
+    "lint": "npx eslint src --ext .tsx",
+    "format": "npx prettier --write src",
+    "check": "npx prettier --check src",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,5 +53,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1"
   }
 }

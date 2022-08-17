@@ -1,5 +1,5 @@
 interface ISuggestionDto {
-  title: string;
-  type: string;
-  visited?: boolean;
+  title: string
+  type: string
+  visited?: boolean
 }
